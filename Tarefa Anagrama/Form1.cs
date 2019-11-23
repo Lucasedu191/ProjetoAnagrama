@@ -21,7 +21,26 @@ namespace Tarefa_Anagrama
         {
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
-            { }
+            {
+                int conta = 0;
+                string linha;
+
+                // le cada linha .  
+                System.IO.StreamReader file =
+                    new System.IO.StreamReader(openFileDialog1.FileName);
+                while ((linha = file.ReadLine()) != null)
+                {
+                    richTextBox1.AppendText(linha);
+                    richTextBox1.AppendText (Environment.NewLine);
+                    
+                    
+                }
+
+               // file.Close();
+                //System.Console.WriteLine("There were {0} lines.", conta);
+                // Suspend the screen.  
+               
+            }
         }
     }
 }

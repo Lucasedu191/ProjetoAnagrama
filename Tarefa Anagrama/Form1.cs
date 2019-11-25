@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Tarefa_Anagrama
 {
@@ -55,8 +56,8 @@ namespace Tarefa_Anagrama
                             }
                         }
                     }
-                   // CriarAnagrama("", txtTexto.Text);
-                    //linha.Text = string.Join(Environment.NewLine, anagrama);
+                    CriarAnagrama("", txtTexto.Text);
+                    richTextBox1.Text = string.Join(Environment.NewLine, linha);
 
                 }
             }
